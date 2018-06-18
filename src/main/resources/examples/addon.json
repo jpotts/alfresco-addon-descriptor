@@ -1,0 +1,14 @@
+{
+    "name": "My Example Add-On",
+    "description": "An example add-on descriptor for a fake add-on.",
+    "developer": "Some Developer",
+    "versions": ["5.1.x Community", "5.2.x Community"],
+    "license": "Apache License 2.0",
+    "homePage": "http://ecmarchitect.com",
+    "downloadPage": "http://github.com/jpotts",
+    "tags": ["Example", "Addon", "Customization"],
+    "installType": "AMP",
+    "componentType": ["Dashlet", "Content Model", "Share Customization"],
+    "products": ["Alfresco Content Services"],
+    "review": "Developer Self-Reviewed"
+}

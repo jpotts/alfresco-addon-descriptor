@@ -1,0 +1,160 @@
+{
+    "title": "Alfresco Add-on",
+    "id": "http://ecmarchitect.com/schemas/addon/v1draft/addon-descriptor-schema.json",
+    "description": "A representation of an Alfresco Add-On",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "Name of the Add-on",
+            "type": "string"
+        },
+        "description": {
+            "description": "Description of the Add-on",
+            "type": "string"
+        },
+        "developer": {
+            "description": "Name of the Add-on developer. This could be an individual or a company name",
+            "type": "string"
+        },
+        "versions":  {
+            "description": "Versions of Alfresco this Add-on is known to work with",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "3.0.x Community",
+                    "3.2.x Community",
+                    "3.3.x Community",
+                    "3.4.x Community",
+                    "4.0.x Community",
+                    "4.1.x Community",
+                    "4.2.x Community",
+                    "5.0.x Community",
+                    "5.1.x Community",
+                    "5.2.x Community",
+                    "3.0.x Enterprise",
+                    "3.2.x Enterprise",
+                    "3.3.x Enterprise",
+                    "3.4.x Enterprise",
+                    "4.0.x Enterprise",
+                    "4.1.x Enterprise",
+                    "4.2.x Enterprise",
+                    "5.0.x Enterprise",
+                    "5.1.x Enterprise",
+                    "5.2.x Enterprise"
+                    ]
+            }
+        },
+        "license": {
+            "description": "The license the Add-on is released under, or use 'Proprietary' if the Add-on is released under a commercial or proprietary license",
+            "type": "string",
+            "enum": [
+                "GNU Affero General Public License v3.0",
+                "Apache License 2.0",
+                "GNU General Public License v3.0",
+                "GNU Lesser General Public License v3.0",
+                "MIT License",
+                "Mozilla Public License 2.0",
+                "The Unlicense",
+                "Proprietary"
+            ]
+        },
+        "costModel": {
+            "description": "How is this Add-on monetized, if at all",
+            "type": "string",
+            "enum": [
+                "Freely-available without warranty or support",
+                "Freely-available with commercial support available",
+                "Recurring Subscription",
+                "One-time charge",
+                "License plus annual maintenance",
+                "Other"
+            ]
+        },
+        "homePage": {
+            "description": "URL to a web page that contains more information about the Add-on",
+            "type": "string",
+            "format": "uri"
+        },
+        "downloadPage": {
+            "description": "URL to a web page that contains a downloadable distribution of the Add-on",
+            "type": "string",
+            "format": "uri"
+        },
+        "tags": {
+            "description": "Freeform tags that describe the Add-on",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "installType": {
+            "description": "The type of packaging for this Add-on",
+            "type": "string",
+            "enum": [
+                "AMP",
+                "JAR",
+                "Executable installer",
+                "ZIP/TAR"
+            ]
+        },
+        "componentType": {
+            "description": "The type of components included in this Add-on",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Dashlet",
+                    "Content Model",
+                    "Business Process Definition",
+                    "Action",
+                    "Behavior",
+                    "Web Script",
+                    "Share Customization",
+                    "Administration Panel",
+                    "Share Page",
+                    "Subsystem",
+                    "Client-side JavaScript Library",
+                    "Share Extension Module",
+                    "ADF Component Extension"
+                ]
+            }
+        },
+        "products": {
+            "description": "Which Alfresco product is this Add-on primarily meant to extend",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Alfresco Content Services",
+                    "Alfresco Process Services",
+                    "Alfresco Governance Services",
+                    "Alfresco Application Development Framework"
+                ]
+            }
+        },
+        "review": {
+            "description": "Has this Add-on been reviewed against the published best practices for Add-on development. If so, to what extent?",
+            "type": "string",
+            "enum": [
+                "Not Reviewed",
+                "Developer Self-Reviewed",
+                "Third-Party Reviewed"
+            ]
+        },
+        "reviewReference": {
+            "description": "If this Add-on has been reviewed against published best practices by a third-party, provide a link to the review report.",
+            "type": "string",
+            "format": "uri"
+        }
+    },
+    "required": [
+        "name",
+        "description",
+        "developer",
+        "license",
+        "homePage"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#"
+}
